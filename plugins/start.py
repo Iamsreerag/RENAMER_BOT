@@ -6,7 +6,9 @@ from helper.database import  insert
 @Client.on_message(filters.private & filters.command(["start"]))
 async def start(client,message):
 	insert(int(message.chat.id))
-	await message.reply_text(text =f"""
+	await message.reply_photo(
+        photo ="https://telegra.ph/file/70d2da745d72f8ecdf141.jpg"
+        caption =f"""
 	Hello {message.from_user.first_name }
 	__I am file renamer bot, Please sent any telegram 
 	**Document Or Video** and enter new filenameto rename it__
